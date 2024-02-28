@@ -51,6 +51,12 @@ services:
 
 ```
 
+Com o ficheiro **docker-compose.yml** criado, vamos correr o ambiente com o seguinte comando:
+
+```bash
+docker-compose up -d
+```
+
 Aceder ao **pgAdmin** atraves do link [http://localhost:5050](http://localhost:5050) e fazer login com as credenciais:
 - **Email**: ``` dmin@example.com ```
 - **Password**: ``` password ```
