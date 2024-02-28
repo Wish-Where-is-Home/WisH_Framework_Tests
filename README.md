@@ -45,9 +45,9 @@ services:
         ports:
             - "5050:80"
 
-    volumes:
-        data:
-            name: wish_data
+volumes:
+    data:
+        name: wish_data
 
 ```
 
