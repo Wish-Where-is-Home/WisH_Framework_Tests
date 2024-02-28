@@ -58,7 +58,7 @@ docker-compose up -d
 ```
 
 Aceder ao **pgAdmin** atraves do link [http://localhost:5050](http://localhost:5050) e fazer login com as credenciais:
-- **Email**: ``` dmin@example.com ```
+- **Email**: ``` admin@example.com ```
 - **Password**: ``` password ```
 
 Depois de fazer login, clicar em **Add New Server** e preencher os campos com as seguintes credenciais:
@@ -69,4 +69,27 @@ Depois de fazer login, clicar em **Add New Server** e preencher os campos com as
 - **Password**: ``` password ```
 
     
-Em relacao ao **QGIS**, vamos usar a versao download do site.
+Em relacao ao **QGIS**, vamos usar a versao download do site. É necessario criar uma nova ligação a base de dados espaciais. Para isso, clicar em **Add PostGIS Layers** e preencher os campos com as seguintes credenciais:
+- **Name**: ``` wish ```
+- **Host**: ``` localhost ```
+- **Port**: ``` 5432 ```
+- **Database**: ``` wish ```
+- **Username**: ``` test ```
+- **Password**: ``` password ```
+- **SSL mode**: ``` disable ```
+- **Save username and password**: ``` yes ```
+
+
+Para conectares ao **PostGis Docker** atraves da linha de comandos, podes usar o seguinte comando:
+
+```bash
+docker exec -it wish_framework_tests_db_1 psql -U test -d wish 
+```
+
+Para inserir dados na base de dados, podes usar o seguinte comando:
+
+```bash
+shp2pgsql -s 4326 ../../Transferências/portugal-latest-free.shp/gis_osm_buildings_a_free_1.shp public.geo_buildings_free | docker exec -i wish_framework_tests_db_1 psql -U test -d wish
+```
+
+Todas as tabelas que tem a extensao **_a** sao as tabelas de poligonos
