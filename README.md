@@ -123,3 +123,7 @@ Depois de criar o projeto, cria uma nova aplicacao **Django**:
 python manage.py startapp api
 ```
 
+Com o techo de codigo abaixo, lemos todas as tabelas da base de dados e criamos os modelos **Django** automaticamente:
+```bash
+python manage.py inspectdb > models.py
+```
