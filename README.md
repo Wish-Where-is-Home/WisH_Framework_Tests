@@ -92,4 +92,32 @@ Para inserir dados na base de dados, podes usar o seguinte comando:
 shp2pgsql -s 4326 ../../Transferências/portugal-latest-free.shp/gis_osm_buildings_a_free_1.shp public.geo_buildings_free | docker exec -i wish_framework_tests_db_1 psql -U test -d wish
 ```
 
-Todas as tabelas que tem a extensao **_a** sao as tabelas de poligonos
+### API
+
+A API do projeto **Wish** ira ser desenvolvida em **GeoDjango** que e uma extensao do **Django**. Vamos usar o **Django Rest Framework** para criar uma API REST. Vamos usar o **Postman** para testar a API.
+
+- [Link para o Django](https://www.djangoproject.com/)
+- [Link para o GeoDjango](https://docs.djangoproject.com/en/3.2/ref/contrib/gis/)
+- [Link para o Django Rest Framework](https://www.django-rest-framework.org/)
+- [Link para o Postman](https://www.postman.com/)
+
+Começa por criar um ambiente virtual e instalar os requerimentos do projeto:
+
+```bash
+python3 -m venv env
+source env/bin/activate
+pip install -r requirements.txt
+```
+
+Depois de instalar os requerimentos, cria um novo projeto **Django**:
+
+```bash
+django-admin startproject wish
+```
+
+Depois de criar o projeto, cria uma nova aplicacao **Django**:
+
+```bash
+python manage.py startapp api
+```
+
