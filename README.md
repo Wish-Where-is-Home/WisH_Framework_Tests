@@ -100,6 +100,8 @@ A API do projeto **Wish** ira ser desenvolvida em **GeoDjango** que e uma extens
 - [Link para o GeoDjango](https://docs.djangoproject.com/en/3.2/ref/contrib/gis/)
 - [Link para o Django Rest Framework](https://www.django-rest-framework.org/)
 - [Link para o Postman](https://www.postman.com/)
+- [Tutorial para o GeoDjango](https://docs.djangoproject.com/en/5.0/ref/contrib/gis/tutorial/)
+- [Tutorial Youtube](https://www.youtube.com/watch?v=L3YoX9wrGDc&list=PL7amXK4vKqATa_KrfQ3_tEF_ywAgAqWeJ&index=2&ab_channel=WanjohiKibui)
 
 Começa por criar um ambiente virtual e instalar os requerimentos do projeto:
 
