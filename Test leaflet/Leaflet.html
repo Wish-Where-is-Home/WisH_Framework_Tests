@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portugal Map</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            margin: 0;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        #map { height: 700px; width: 700px; }
+        #popup { position: absolute; bottom: 20px; left: 20px; background-color: white; padding: 10px; border: 1px solid #ccc; }
+        #search-form { position: absolute; top: 20px; left: 20px; z-index: 1000; }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <div id="popup">Latitude: <span id="latitude"></span><br>Longitude: <span id="longitude"></span></div>
+    <form id="search-form">
+        <input type="text" id="district-search" placeholder="Enter district name">
+        <button type="submit">Search</button>
+    </form>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+    <script src="Portugal.json"></script> <!-- GeoJSON file containing boundaries of Portugal -->
+
+    <script>
+        var map = L.map('map', {
+            maxBounds: L.latLngBounds(L.latLng(36.74, -3.97), L.latLng(42.61, -11.62)),
+            minZoom: 7, 
+        }).setView([39.5, -8], 7); 
+
+        // Add tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        var popup = L.popup(); 
+        var geojsonLayer;
+
+        function showDistrictName(e) {
+            var layer = e.target;
+            popup.setLatLng(e.latlng).setContent(layer.feature.properties.name).openOn(map);
+        }
+
+        function resetPopup() {
+            popup.removeFrom(map);
+        }
+
+        function highlightDistrict(e) {
+            var layer = e.target;
+            layer.setStyle({
+                weight: 2,
+                color: '#D56060',
+                weight:2,
+                dashArray: '',
+                fillOpacity: 0.7,
+                fillColor:"#D56060",
+            });
+        }
+
+        function resetHighlight(e) {
+            geojsonLayer.resetStyle(e.target);
+        }
+
+        function changeColorOfDistrict(districtName, color) {
+            geojsonLayer.eachLayer(function(layer) {
+                if (layer.feature.properties.name === districtName) {
+                    layer.setStyle({ fillColor: color });
+                }
+            });
+        }
+
+        // Add GeoJSON data
+        fetch('Portugal.json')
+            .then(response => response.json())
+            .then(data => {
+                geojsonLayer = L.geoJSON(data, {
+                    style: {
+                        fillColor: 'transparent', 
+                        color: '#666', 
+                        weight: 4,
+                        opacity: 1 
+                    },
+                    onEachFeature: function(feature, layer) {
+                        layer.on({
+                            mouseover: highlightDistrict,
+                            mouseout: resetHighlight,
+                            click: showDistrictName
+                        });
+                    }
+                }).addTo(map);
+            })
+            .catch(error => {
+                console.error('Error loading GeoJSON data:', error);
+            });
+
+        map.on('mousemove', function(e) {
+            var latlng = e.latlng;
+            document.getElementById('latitude').textContent = latlng.lat.toFixed(5);
+            document.getElementById('longitude').textContent = latlng.lng.toFixed(5);
+        });
+
+        document.getElementById('search-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var districtName = document.getElementById('district-search').value.trim();
+            if (districtName === '') return;
+
+            
+            changeColorOfDistrict(districtName, 'black');
+        });
+    </script>
+</body>
+</html>
