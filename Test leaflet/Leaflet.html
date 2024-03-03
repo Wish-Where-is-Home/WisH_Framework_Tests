@@ -37,44 +37,76 @@
     <script src="Portugal.json"></script> <!-- GeoJSON file containing boundaries of Portugal -->
 
     <script>
+        // Initial map setup
         var map = L.map('map', {
             maxBounds: L.latLngBounds(L.latLng(36.74, -3.97), L.latLng(42.61, -11.62)),
             minZoom: 7, 
+            zoomControl: false
         }).setView([39.5, -8], 7); 
-
-        // Add tile layer
+    
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
-
+    
         var popup = L.popup(); 
         var geojsonLayer;
-
+    
+        // Function to handle actions when zooming into a district
+        function zoomToDistrict(e) {
+            var districtBounds = e.target.getBounds();
+    
+            // Set map view to the bounds of the district
+            map.fitBounds(districtBounds);
+    
+            // You can add additional functionalities here when zooming into a district
+            // For example, displaying specific information about the district or modifying the map layout
+        }
+    
+        // Function to show district name on hover
         function showDistrictName(e) {
             var layer = e.target;
             popup.setLatLng(e.latlng).setContent(layer.feature.properties.name).openOn(map);
         }
-
+    
+        // Function to reset popup
         function resetPopup() {
             popup.removeFrom(map);
         }
-
+    
+        // Function to highlight district on hover
         function highlightDistrict(e) {
             var layer = e.target;
             layer.setStyle({
                 weight: 2,
                 color: '#D56060',
-                weight:2,
                 dashArray: '',
                 fillOpacity: 0.7,
                 fillColor:"#D56060",
             });
         }
 
+    function handleZoomChange() {
+        var currentZoom = map.getZoom();
+
+        if (currentZoom < 8) {
+            // Perform actions for zoom level less than 8
+            console.log("Zoom level less than 8");
+        } else {
+            // Perform actions for zoom level 8 or greater
+            console.log("Zoom level 8 or greater");
+        }
+    }
+
+// Listen for the zoomend event
+map.on('zoomend', handleZoomChange);
+
+    
+        // Function to reset highlight
         function resetHighlight(e) {
             geojsonLayer.resetStyle(e.target);
         }
-
+    
+        // Function to change color of a district
         function changeColorOfDistrict(districtName, color) {
             geojsonLayer.eachLayer(function(layer) {
                 if (layer.feature.properties.name === districtName) {
@@ -82,7 +114,7 @@
                 }
             });
         }
-
+    
         // Add GeoJSON data
         fetch('Portugal.json')
             .then(response => response.json())
@@ -98,7 +130,10 @@
                         layer.on({
                             mouseover: highlightDistrict,
                             mouseout: resetHighlight,
-                            click: showDistrictName
+                            click: function(e) {
+                                showDistrictName(e);
+                                zoomToDistrict(e);
+                            }
                         });
                     }
                 }).addTo(map);
@@ -106,21 +141,23 @@
             .catch(error => {
                 console.error('Error loading GeoJSON data:', error);
             });
-
+    
+        // Event listener for mouse move
         map.on('mousemove', function(e) {
             var latlng = e.latlng;
             document.getElementById('latitude').textContent = latlng.lat.toFixed(5);
             document.getElementById('longitude').textContent = latlng.lng.toFixed(5);
         });
-
+    
+        // Event listener for district search form
         document.getElementById('search-form').addEventListener('submit', function(event) {
             event.preventDefault();
             var districtName = document.getElementById('district-search').value.trim();
             if (districtName === '') return;
-
-            
+    
             changeColorOfDistrict(districtName, 'black');
         });
     </script>
+    
 </body>
 </html>
