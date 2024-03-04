@@ -127,3 +127,27 @@ Com o techo de codigo abaixo, lemos todas as tabelas da base de dados e criamos 
 ```bash
 python manage.py inspectdb > models.py
 ```
+
+
+### GeoServer
+
+
+Pull da imagem do **GeoServer**:
+
+```bash
+docker pull docker.osgeo.org/geoserver:2.24.1
+```
+
+Correr o **GeoServer**:
+
+```bash
+docker run -it -p 8080:8080 \
+  --mount src="./data/",target=/opt/geoserver_data/,type=bind \
+  docker.osgeo.org/geoserver:2.24.1
+```
+
+Aceder ao **GeoServer** atraves do link [http://localhost:8080/geoserver/web](http://localhost:8080/geoserver/web) e fazer login com as credencias por defeito
+- **Username**: ``` admin ```
+- **Password**: ``` geoserver ```
+
+
