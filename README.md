@@ -151,3 +151,4 @@ Aceder ao **GeoServer** atraves do link [http://localhost:8080/geoserver/web](ht
 - **Password**: ``` geoserver ```
 
 
+aceder ao post gis atraves do geoserver:
