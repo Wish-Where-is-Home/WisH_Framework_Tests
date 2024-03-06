@@ -1,7 +1,20 @@
 :root{
-    --background-color-dark:;
+    --background-color-dark:#121212;
     --background-color-light:whitesmoke;
+
 }
+
+
+
+.light-mode{
+    --background-color: var(--background-color-light);
+}
+
+
+.dark-mode{
+    --background-color: var(--background-color-dark);
+}
+
 
 
 .navbar {
@@ -10,21 +23,29 @@
     width: 90%;
     height: 12vh;
     border: 2px solid #0dddda;
-    background-color: var(--background-color-light);
+    background-color: var(--background-color);
     border-top: 0;
     border-right: 0;
     border-left: 0;
     display: flex;
     justify-content: center;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
 }
+
 
 .navbar-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 70%;
+    background-color: var(--background-color);
 }
+
+
 
 .logo {
     width: auto; 
@@ -32,10 +53,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: var(--background-color);
 }
 
-.logo h1 {
-    color: #0dddda;
+.logo img {
+    height: 80px;
+    width: auto;
 }
 
 .hamburger {

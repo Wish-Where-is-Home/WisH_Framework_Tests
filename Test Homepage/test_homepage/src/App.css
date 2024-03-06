@@ -1,3 +1,23 @@
+
+:root{
+  --background-color-dark:#211f1f;
+  --background-color-light:whitesmoke;
+
+}
+
+
+
+.light-mode{
+  --background-color: var(--background-color-light);
+}
+
+
+.dark-mode{
+  --background-color: var(--background-color-dark);
+}
+
+
+
 .App {
   text-align: center;
 }
@@ -43,5 +63,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Tahoma, Verdana, Segoe, sans-serif;
-  background-color: whitesmoke;
+  background-color: var(--background-color);
 }
+

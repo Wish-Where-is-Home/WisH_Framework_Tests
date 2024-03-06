@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Navbar.css';
+import logo from './../../logo1.png';
 
 function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -17,7 +18,7 @@ function Navbar() {
       <nav className={`navbar ${darkMode ? 'dark-mode' : 'light-mode'}`}>
             <div className='navbar-container'>
                 <div className="logo">
-                    <h1>Logo</h1>
+                    <img src={logo} alt="logo" />
                 </div>
                 <div className="hamburger" onClick={toggleMenu}>
                     <div className={`hamburger-lines ${menuOpen ? 'open' : ''}`}>
@@ -26,7 +27,7 @@ function Navbar() {
                         <span className="line line3"></span>
                     </div>
                 </div>
-                <input type="checkbox" className="theme-toggle" onClick={toggleDarkMode} />
+                <input type="checkbox" className="theme-toggle"onClick={toggleDarkMode} />
             </div>
             {menuOpen && (
                 <div className="menu-items">
