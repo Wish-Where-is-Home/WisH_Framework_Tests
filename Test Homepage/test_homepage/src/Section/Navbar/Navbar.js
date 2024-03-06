@@ -1,39 +1,56 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 import logo from './../../logo1.png';
 
-function Navbar() {
+function Navbar({ darkMode, toggleDarkMode }) {
     const [menuOpen, setMenuOpen] = useState(false);
-    const [darkMode, setDarkMode] = useState(false);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 1000);
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     };
 
-    const toggleDarkMode = () => {
-        setDarkMode(!darkMode);
-    };
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 1000);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     return (
-      <nav className={`navbar ${darkMode ? 'dark-mode' : 'light-mode'}`}>
+        <nav className={`navbar ${darkMode ? 'dark-mode' : 'light-mode'}`}>
             <div className='navbar-container'>
                 <div className="logo">
                     <img src={logo} alt="logo" />
                 </div>
-                <div className="hamburger" onClick={toggleMenu}>
-                    <div className={`hamburger-lines ${menuOpen ? 'open' : ''}`}>
-                        <span className="line line1"></span>
-                        <span className="line line2"></span>
-                        <span className="line line3"></span>
+                {isMobile ? (
+                    <div className="hamburger" onClick={toggleMenu}>
+                        <div className={`hamburger-lines ${menuOpen ? 'open' : ''}`}>
+                            <span className="line line1"></span>
+                            <span className="line line2"></span>
+                            <span className="line line3"></span>
+                        </div>
                     </div>
-                </div>
-                <input type="checkbox" className="theme-toggle"onClick={toggleDarkMode} />
+                ) : (
+                    <div className="menu-items2">
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Login</a></li>
+                        </ul>
+                    </div>
+                )}
+                <input type="checkbox" className="theme-toggle" checked={darkMode} onChange={toggleDarkMode} />
             </div>
-            {menuOpen && (
+            {menuOpen && isMobile && (
                 <div className="menu-items">
                     <ul>
-                        <li><a href="#">Login</a></li>
                         <li><a href="#">About Us</a></li>
+                        <li><a href="#">Login</a></li>
                     </ul>
                 </div>
             )}

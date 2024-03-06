@@ -1,7 +1,14 @@
 
 :root{
-  --background-color-dark:#211f1f;
+  --background-color-dark:#373434;
   --background-color-light:whitesmoke;
+
+  --hamburger-lines-dark:white;
+  --hamburger-lines-light:black;
+
+  --text-color1-light:black;
+  --text-color1-dark:#0dddda;
+
 
 }
 
@@ -9,11 +16,15 @@
 
 .light-mode{
   --background-color: var(--background-color-light);
+  --hamburger-lines: var(--hamburger-lines-light);
+  --text-color1: var(--text-color1-light);
 }
 
 
 .dark-mode{
   --background-color: var(--background-color-dark);
+  --hamburger-lines: var(--hamburger-lines-dark);
+  --text-color1: var(--text-color1-dark);
 }
 
 
@@ -63,6 +74,5 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Tahoma, Verdana, Segoe, sans-serif;
-  background-color: var(--background-color);
 }
 

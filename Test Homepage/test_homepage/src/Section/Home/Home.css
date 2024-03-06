@@ -1,23 +1,3 @@
-
-:root{
-    --background-color-dark:#211f1f;
-    --background-color-light:whitesmoke;
-  
-  }
-  
-  
-  
-  .light-mode{
-    --background-color: var(--background-color-light);
-  }
-  
-  
-  .dark-mode{
-    --background-color: var(--background-color-dark);
-  }
-  
-
-
 .home-section{
     height: 100vh;
     width: 100%;
@@ -33,6 +13,7 @@
     font-weight: 600;
     letter-spacing: 0.4rem;
     position: absolute;
+    color: var(--text-color1);
     
 }
 
@@ -55,13 +36,11 @@
 }
 
 
-.home-container .left p{
-    font-size: 1.5rem;
-    margin-top: 5rem;
-    margin-bottom: 2rem;
-    color: #0dddda;
+.home-container .right p{
+    font-size: 1.2rem;
+    color: var(--hamburger-lines);
     font-weight: 600;
-    letter-spacing: 0.4rem;
+    letter-spacing: 0.3rem;
 
 }
 
@@ -78,11 +57,14 @@
 .select-district .select{
     width: 50%;
     margin-top: 2rem;
-    height: 13rem;
+    height: 4rem;
     padding: 10px;
     display: block;
+    background-color: var(--background-color);
     border: 3px solid #0dddda;
+    color: var(--hamburger-lines);
     line-height: 1.42857143;
+    text-align: center;
     
 }
 
@@ -108,11 +90,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 .svg-icon {
-    width: 440px; 
-    height: auto; 
+    width: auto; 
+    height: 140vh; 
 }
 
 .svg-icon path {
