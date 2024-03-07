@@ -1,0 +1,589 @@
+Results for gis_osm_pois_a_free_1.shp:
+
+==================================================
+INFO: Open of `wish/data/portugal-latest-free.shp/gis_osm_pois_a_free_1.shp'
+      using driver `ESRI Shapefile' successful.
+
+Layer name: gis_osm_pois_a_free_1
+Geometry: Polygon
+Feature Count: 99101
+Extent: (-31.265944, 32.633365) - (-6.195254, 42.152032)
+Layer SRS WKT:
+GEOGCRS["WGS 84",
+    DATUM["World Geodetic System 1984",
+        ELLIPSOID["WGS 84",6378137,298.257223563,
+            LENGTHUNIT["metre",1]]],
+    PRIMEM["Greenwich",0,
+        ANGLEUNIT["degree",0.0174532925199433]],
+    CS[ellipsoidal,2],
+        AXIS["latitude",north,
+            ORDER[1],
+            ANGLEUNIT["degree",0.0174532925199433]],
+        AXIS["longitude",east,
+            ORDER[2],
+            ANGLEUNIT["degree",0.0174532925199433]],
+    ID["EPSG",4326]]
+Data axis to CRS axis mapping: 2,1
+osm_id: String (12.0)
+code: Integer (4.0)
+fclass: String (28.0)
+name: String (100.0)
+
+==================================================
+Results for gis_osm_pofw_a_free_1.shp:
+
+==================================================
+INFO: Open of `wish/data/portugal-latest-free.shp/gis_osm_pofw_a_free_1.shp'
+      using driver `ESRI Shapefile' successful.
+
+Layer name: gis_osm_pofw_a_free_1
+Geometry: Polygon
+Feature Count: 9507
+Extent: (-31.262900, 32.637671) - (-6.185554, 42.159668)
+Layer SRS WKT:
+GEOGCRS["WGS 84",
+    DATUM["World Geodetic System 1984",
+        ELLIPSOID["WGS 84",6378137,298.257223563,
+            LENGTHUNIT["metre",1]]],
+    PRIMEM["Greenwich",0,
+        ANGLEUNIT["degree",0.0174532925199433]],
+    CS[ellipsoidal,2],
+        AXIS["latitude",north,
+            ORDER[1],
+            ANGLEUNIT["degree",0.0174532925199433]],
+        AXIS["longitude",east,
+            ORDER[2],
+            ANGLEUNIT["degree",0.0174532925199433]],
+    ID["EPSG",4326]]
+Data axis to CRS axis mapping: 2,1
+osm_id: String (12.0)
+code: Integer (4.0)
+fclass: String (28.0)
+name: String (100.0)
+
+==================================================
+Results for gis_osm_traffic_free_1.shp:
+
+==================================================
+INFO: Open of `wish/data/portugal-latest-free.shp/gis_osm_traffic_free_1.shp'
+      using driver `ESRI Shapefile' successful.
+
+Layer name: gis_osm_traffic_free_1
+Geometry: Point
+Feature Count: 129436
+Extent: (-31.265540, 32.634353) - (-6.266535, 42.154739)
+Layer SRS WKT:
+GEOGCRS["WGS 84",
+    DATUM["World Geodetic System 1984",
+        ELLIPSOID["WGS 84",6378137,298.257223563,
+            LENGTHUNIT["metre",1]]],
+    PRIMEM["Greenwich",0,
+        ANGLEUNIT["degree",0.0174532925199433]],
+    CS[ellipsoidal,2],
+        AXIS["latitude",north,
+            ORDER[1],
+            ANGLEUNIT["degree",0.0174532925199433]],
+        AXIS["longitude",east,
+            ORDER[2],
+            ANGLEUNIT["degree",0.0174532925199433]],
+    ID["EPSG",4326]]
+Data axis to CRS axis mapping: 2,1
+osm_id: String (12.0)
+code: Integer (4.0)
+fclass: String (28.0)
+name: String (100.0)
+
+==================================================
+Results for gis_osm_waterways_free_1.shp:
+
+==================================================
+INFO: Open of `wish/data/portugal-latest-free.shp/gis_osm_waterways_free_1.shp'
+      using driver `ESRI Shapefile' successful.
+
+Layer name: gis_osm_waterways_free_1
+Geometry: Line String
+Feature Count: 96589
+Extent: (-31.263586, 32.639272) - (-6.083136, 42.283011)
+Layer SRS WKT:
+GEOGCRS["WGS 84",
+    DATUM["World Geodetic System 1984",
+        ELLIPSOID["WGS 84",6378137,298.257223563,
+            LENGTHUNIT["metre",1]]],
+    PRIMEM["Greenwich",0,
+        ANGLEUNIT["degree",0.0174532925199433]],
+    CS[ellipsoidal,2],
+        AXIS["latitude",north,
+            ORDER[1],
+            ANGLEUNIT["degree",0.0174532925199433]],
+        AXIS["longitude",east,
+            ORDER[2],
+            ANGLEUNIT["degree",0.0174532925199433]],
+    ID["EPSG",4326]]
+Data axis to CRS axis mapping: 2,1
+osm_id: String (12.0)
+code: Integer (4.0)
+fclass: String (28.0)
+width: Integer (5.0)
+name: String (100.0)
+
+==================================================
+Results for gis_osm_traffic_a_free_1.shp:
+
+==================================================
+INFO: Open of `wish/data/portugal-latest-free.shp/gis_osm_traffic_a_free_1.shp'
+      using driver `ESRI Shapefile' successful.
+
+Layer name: gis_osm_traffic_a_free_1
+Geometry: Polygon
+Feature Count: 47143
+Extent: (-31.266140, 32.634151) - (-6.186709, 42.156338)
+Layer SRS WKT:
+GEOGCRS["WGS 84",
+    DATUM["World Geodetic System 1984",
+        ELLIPSOID["WGS 84",6378137,298.257223563,
+            LENGTHUNIT["metre",1]]],
+    PRIMEM["Greenwich",0,
+        ANGLEUNIT["degree",0.0174532925199433]],
+    CS[ellipsoidal,2],
+        AXIS["latitude",north,
+            ORDER[1],
+            ANGLEUNIT["degree",0.0174532925199433]],
+        AXIS["longitude",east,
+            ORDER[2],
+            ANGLEUNIT["degree",0.0174532925199433]],
+    ID["EPSG",4326]]
+Data axis to CRS axis mapping: 2,1
+osm_id: String (12.0)
+code: Integer (4.0)
+fclass: String (28.0)
+name: String (100.0)
+
+==================================================
+Results for gis_osm_roads_free_1.shp:
+
+==================================================
+INFO: Open of `wish/data/portugal-latest-free.shp/gis_osm_roads_free_1.shp'
+      using driver `ESRI Shapefile' successful.
+
+Layer name: gis_osm_roads_free_1
+Geometry: Line String
+Feature Count: 1340126
+Extent: (-31.266539, 32.633282) - (-6.174800, 42.173330)
+Layer SRS WKT:
+GEOGCRS["WGS 84",
+    DATUM["World Geodetic System 1984",
+        ELLIPSOID["WGS 84",6378137,298.257223563,
+            LENGTHUNIT["metre",1]]],
+    PRIMEM["Greenwich",0,
+        ANGLEUNIT["degree",0.0174532925199433]],
+    CS[ellipsoidal,2],
+        AXIS["latitude",north,
+            ORDER[1],
+            ANGLEUNIT["degree",0.0174532925199433]],
+        AXIS["longitude",east,
+            ORDER[2],
+            ANGLEUNIT["degree",0.0174532925199433]],
+    ID["EPSG",4326]]
+Data axis to CRS axis mapping: 2,1
+osm_id: String (12.0)
+code: Integer (4.0)
+fclass: String (28.0)
+name: String (100.0)
+ref: String (20.0)
+oneway: String (1.0)
+maxspeed: Integer (3.0)
+layer: Integer64 (12.0)
+bridge: String (1.0)
+tunnel: String (1.0)
+
+==================================================
+Results for gis_osm_natural_free_1.shp:
+
+==================================================
+INFO: Open of `wish/data/portugal-latest-free.shp/gis_osm_natural_free_1.shp'
+      using driver `ESRI Shapefile' successful.
+
+Layer name: gis_osm_natural_free_1
+Geometry: Point
+Feature Count: 147341
+Extent: (-31.258239, 32.412267) - (-6.254278, 42.114945)
+Layer SRS WKT:
+GEOGCRS["WGS 84",
+    DATUM["World Geodetic System 1984",
+        ELLIPSOID["WGS 84",6378137,298.257223563,
+            LENGTHUNIT["metre",1]]],
+    PRIMEM["Greenwich",0,
+        ANGLEUNIT["degree",0.0174532925199433]],
+    CS[ellipsoidal,2],
+        AXIS["latitude",north,
+            ORDER[1],
+            ANGLEUNIT["degree",0.0174532925199433]],
+        AXIS["longitude",east,
+            ORDER[2],
+            ANGLEUNIT["degree",0.0174532925199433]],
+    ID["EPSG",4326]]
+Data axis to CRS axis mapping: 2,1
+osm_id: String (12.0)
+code: Integer (4.0)
+fclass: String (28.0)
+name: String (100.0)
+
+==================================================
+Results for gis_osm_railways_free_1.shp:
+
+==================================================
+INFO: Open of `wish/data/portugal-latest-free.shp/gis_osm_railways_free_1.shp'
+      using driver `ESRI Shapefile' successful.
+
+Layer name: gis_osm_railways_free_1
+Geometry: Line String
+Feature Count: 9531
+Extent: (-9.468669, 37.011022) - (-6.770934, 42.177642)
+Layer SRS WKT:
+GEOGCRS["WGS 84",
+    DATUM["World Geodetic System 1984",
+        ELLIPSOID["WGS 84",6378137,298.257223563,
+            LENGTHUNIT["metre",1]]],
+    PRIMEM["Greenwich",0,
+        ANGLEUNIT["degree",0.0174532925199433]],
+    CS[ellipsoidal,2],
+        AXIS["latitude",north,
+            ORDER[1],
+            ANGLEUNIT["degree",0.0174532925199433]],
+        AXIS["longitude",east,
+            ORDER[2],
+            ANGLEUNIT["degree",0.0174532925199433]],
+    ID["EPSG",4326]]
+Data axis to CRS axis mapping: 2,1
+osm_id: String (12.0)
+code: Integer (4.0)
+fclass: String (28.0)
+name: String (100.0)
+layer: Integer64 (12.0)
+bridge: String (1.0)
+tunnel: String (1.0)
+
+==================================================
+Results for gis_osm_places_free_1.shp:
+
+==================================================
+INFO: Open of `wish/data/portugal-latest-free.shp/gis_osm_places_free_1.shp'
+      using driver `ESRI Shapefile' successful.
+
+Layer name: gis_osm_places_free_1
+Geometry: Point
+Feature Count: 30004
+Extent: (-31.262323, 32.638563) - (-6.185517, 42.162008)
+Layer SRS WKT:
+GEOGCRS["WGS 84",
+    DATUM["World Geodetic System 1984",
+        ELLIPSOID["WGS 84",6378137,298.257223563,
+            LENGTHUNIT["metre",1]]],
+    PRIMEM["Greenwich",0,
+        ANGLEUNIT["degree",0.0174532925199433]],
+    CS[ellipsoidal,2],
+        AXIS["latitude",north,
+            ORDER[1],
+            ANGLEUNIT["degree",0.0174532925199433]],
+        AXIS["longitude",east,
+            ORDER[2],
+            ANGLEUNIT["degree",0.0174532925199433]],
+    ID["EPSG",4326]]
+Data axis to CRS axis mapping: 2,1
+osm_id: String (12.0)
+code: Integer (4.0)
+fclass: String (28.0)
+population: Integer64 (10.0)
+name: String (100.0)
+
+==================================================
+Results for gis_osm_transport_free_1.shp:
+
+==================================================
+INFO: Open of `wish/data/portugal-latest-free.shp/gis_osm_transport_free_1.shp'
+      using driver `ESRI Shapefile' successful.
+
+Layer name: gis_osm_transport_free_1
+Geometry: Point
+Feature Count: 36905
+Extent: (-31.264183, 28.469453) - (-6.272395, 42.152084)
+Layer SRS WKT:
+GEOGCRS["WGS 84",
+    DATUM["World Geodetic System 1984",
+        ELLIPSOID["WGS 84",6378137,298.257223563,
+            LENGTHUNIT["metre",1]]],
+    PRIMEM["Greenwich",0,
+        ANGLEUNIT["degree",0.0174532925199433]],
+    CS[ellipsoidal,2],
+        AXIS["latitude",north,
+            ORDER[1],
+            ANGLEUNIT["degree",0.0174532925199433]],
+        AXIS["longitude",east,
+            ORDER[2],
+            ANGLEUNIT["degree",0.0174532925199433]],
+    ID["EPSG",4326]]
+Data axis to CRS axis mapping: 2,1
+osm_id: String (12.0)
+code: Integer (4.0)
+fclass: String (28.0)
+name: String (100.0)
+
+==================================================
+Results for gis_osm_natural_a_free_1.shp:
+
+==================================================
+INFO: Open of `wish/data/portugal-latest-free.shp/gis_osm_natural_a_free_1.shp'
+      using driver `ESRI Shapefile' successful.
+
+Layer name: gis_osm_natural_a_free_1
+Geometry: Polygon
+Feature Count: 1575
+Extent: (-31.260897, 32.637771) - (-6.278954, 42.090139)
+Layer SRS WKT:
+GEOGCRS["WGS 84",
+    DATUM["World Geodetic System 1984",
+        ELLIPSOID["WGS 84",6378137,298.257223563,
+            LENGTHUNIT["metre",1]]],
+    PRIMEM["Greenwich",0,
+        ANGLEUNIT["degree",0.0174532925199433]],
+    CS[ellipsoidal,2],
+        AXIS["latitude",north,
+            ORDER[1],
+            ANGLEUNIT["degree",0.0174532925199433]],
+        AXIS["longitude",east,
+            ORDER[2],
+            ANGLEUNIT["degree",0.0174532925199433]],
+    ID["EPSG",4326]]
+Data axis to CRS axis mapping: 2,1
+osm_id: String (12.0)
+code: Integer (4.0)
+fclass: String (28.0)
+name: String (100.0)
+
+==================================================
+Results for gis_osm_buildings_a_free_1.shp:
+
+==================================================
+INFO: Open of `wish/data/portugal-latest-free.shp/gis_osm_buildings_a_free_1.shp'
+      using driver `ESRI Shapefile' successful.
+
+Layer name: gis_osm_buildings_a_free_1
+Geometry: Polygon
+Feature Count: 1735307
+Extent: (-31.266060, 32.513237) - (-6.183399, 42.159729)
+Layer SRS WKT:
+GEOGCRS["WGS 84",
+    DATUM["World Geodetic System 1984",
+        ELLIPSOID["WGS 84",6378137,298.257223563,
+            LENGTHUNIT["metre",1]]],
+    PRIMEM["Greenwich",0,
+        ANGLEUNIT["degree",0.0174532925199433]],
+    CS[ellipsoidal,2],
+        AXIS["latitude",north,
+            ORDER[1],
+            ANGLEUNIT["degree",0.0174532925199433]],
+        AXIS["longitude",east,
+            ORDER[2],
+            ANGLEUNIT["degree",0.0174532925199433]],
+    ID["EPSG",4326]]
+Data axis to CRS axis mapping: 2,1
+osm_id: String (12.0)
+code: Integer (4.0)
+fclass: String (28.0)
+name: String (100.0)
+type: String (20.0)
+
+==================================================
+Results for gis_osm_pois_free_1.shp:
+
+==================================================
+INFO: Open of `wish/data/portugal-latest-free.shp/gis_osm_pois_free_1.shp'
+      using driver `ESRI Shapefile' successful.
+
+Layer name: gis_osm_pois_free_1
+Geometry: Point
+Feature Count: 142354
+Extent: (-31.275606, 32.404908) - (-6.189917, 42.153765)
+Layer SRS WKT:
+GEOGCRS["WGS 84",
+    DATUM["World Geodetic System 1984",
+        ELLIPSOID["WGS 84",6378137,298.257223563,
+            LENGTHUNIT["metre",1]]],
+    PRIMEM["Greenwich",0,
+        ANGLEUNIT["degree",0.0174532925199433]],
+    CS[ellipsoidal,2],
+        AXIS["latitude",north,
+            ORDER[1],
+            ANGLEUNIT["degree",0.0174532925199433]],
+        AXIS["longitude",east,
+            ORDER[2],
+            ANGLEUNIT["degree",0.0174532925199433]],
+    ID["EPSG",4326]]
+Data axis to CRS axis mapping: 2,1
+osm_id: String (12.0)
+code: Integer (4.0)
+fclass: String (28.0)
+name: String (100.0)
+
+==================================================
+Results for gis_osm_pofw_free_1.shp:
+
+==================================================
+INFO: Open of `wish/data/portugal-latest-free.shp/gis_osm_pofw_free_1.shp'
+      using driver `ESRI Shapefile' successful.
+
+Layer name: gis_osm_pofw_free_1
+Geometry: Point
+Feature Count: 1890
+Extent: (-31.262979, 32.638563) - (-6.222277, 42.089270)
+Layer SRS WKT:
+GEOGCRS["WGS 84",
+    DATUM["World Geodetic System 1984",
+        ELLIPSOID["WGS 84",6378137,298.257223563,
+            LENGTHUNIT["metre",1]]],
+    PRIMEM["Greenwich",0,
+        ANGLEUNIT["degree",0.0174532925199433]],
+    CS[ellipsoidal,2],
+        AXIS["latitude",north,
+            ORDER[1],
+            ANGLEUNIT["degree",0.0174532925199433]],
+        AXIS["longitude",east,
+            ORDER[2],
+            ANGLEUNIT["degree",0.0174532925199433]],
+    ID["EPSG",4326]]
+Data axis to CRS axis mapping: 2,1
+osm_id: String (12.0)
+code: Integer (4.0)
+fclass: String (28.0)
+name: String (100.0)
+
+==================================================
+Results for gis_osm_places_a_free_1.shp:
+
+==================================================
+INFO: Open of `wish/data/portugal-latest-free.shp/gis_osm_places_a_free_1.shp'
+      using driver `ESRI Shapefile' successful.
+
+Layer name: gis_osm_places_a_free_1
+Geometry: Polygon
+Feature Count: 700
+Extent: (-31.268810, 32.403752) - (-6.892494, 42.124448)
+Layer SRS WKT:
+GEOGCRS["WGS 84",
+    DATUM["World Geodetic System 1984",
+        ELLIPSOID["WGS 84",6378137,298.257223563,
+            LENGTHUNIT["metre",1]]],
+    PRIMEM["Greenwich",0,
+        ANGLEUNIT["degree",0.0174532925199433]],
+    CS[ellipsoidal,2],
+        AXIS["latitude",north,
+            ORDER[1],
+            ANGLEUNIT["degree",0.0174532925199433]],
+        AXIS["longitude",east,
+            ORDER[2],
+            ANGLEUNIT["degree",0.0174532925199433]],
+    ID["EPSG",4326]]
+Data axis to CRS axis mapping: 2,1
+osm_id: String (12.0)
+code: Integer (4.0)
+fclass: String (28.0)
+population: Integer64 (10.0)
+name: String (100.0)
+
+==================================================
+Results for gis_osm_transport_a_free_1.shp:
+
+==================================================
+INFO: Open of `wish/data/portugal-latest-free.shp/gis_osm_transport_a_free_1.shp'
+      using driver `ESRI Shapefile' successful.
+
+Layer name: gis_osm_transport_a_free_1
+Geometry: Polygon
+Feature Count: 1187
+Extent: (-31.134023, 32.644738) - (-6.273199, 42.110016)
+Layer SRS WKT:
+GEOGCRS["WGS 84",
+    DATUM["World Geodetic System 1984",
+        ELLIPSOID["WGS 84",6378137,298.257223563,
+            LENGTHUNIT["metre",1]]],
+    PRIMEM["Greenwich",0,
+        ANGLEUNIT["degree",0.0174532925199433]],
+    CS[ellipsoidal,2],
+        AXIS["latitude",north,
+            ORDER[1],
+            ANGLEUNIT["degree",0.0174532925199433]],
+        AXIS["longitude",east,
+            ORDER[2],
+            ANGLEUNIT["degree",0.0174532925199433]],
+    ID["EPSG",4326]]
+Data axis to CRS axis mapping: 2,1
+osm_id: String (12.0)
+code: Integer (4.0)
+fclass: String (28.0)
+name: String (100.0)
+
+==================================================
+Results for gis_osm_water_a_free_1.shp:
+
+==================================================
+INFO: Open of `wish/data/portugal-latest-free.shp/gis_osm_water_a_free_1.shp'
+      using driver `ESRI Shapefile' successful.
+
+Layer name: gis_osm_water_a_free_1
+Geometry: Polygon
+Feature Count: 50475
+Extent: (-31.258266, 32.636597) - (-6.149531, 42.283259)
+Layer SRS WKT:
+GEOGCRS["WGS 84",
+    DATUM["World Geodetic System 1984",
+        ELLIPSOID["WGS 84",6378137,298.257223563,
+            LENGTHUNIT["metre",1]]],
+    PRIMEM["Greenwich",0,
+        ANGLEUNIT["degree",0.0174532925199433]],
+    CS[ellipsoidal,2],
+        AXIS["latitude",north,
+            ORDER[1],
+            ANGLEUNIT["degree",0.0174532925199433]],
+        AXIS["longitude",east,
+            ORDER[2],
+            ANGLEUNIT["degree",0.0174532925199433]],
+    ID["EPSG",4326]]
+Data axis to CRS axis mapping: 2,1
+osm_id: String (12.0)
+code: Integer (4.0)
+fclass: String (28.0)
+name: String (100.0)
+
+==================================================
+Results for gis_osm_landuse_a_free_1.shp:
+
+==================================================
+INFO: Open of `wish/data/portugal-latest-free.shp/gis_osm_landuse_a_free_1.shp'
+      using driver `ESRI Shapefile' successful.
+
+Layer name: gis_osm_landuse_a_free_1
+Geometry: Polygon
+Feature Count: 357520
+Extent: (-31.266531, 32.379136) - (-6.182443, 42.195945)
+Layer SRS WKT:
+GEOGCRS["WGS 84",
+    DATUM["World Geodetic System 1984",
+        ELLIPSOID["WGS 84",6378137,298.257223563,
+            LENGTHUNIT["metre",1]]],
+    PRIMEM["Greenwich",0,
+        ANGLEUNIT["degree",0.0174532925199433]],
+    CS[ellipsoidal,2],
+        AXIS["latitude",north,
+            ORDER[1],
+            ANGLEUNIT["degree",0.0174532925199433]],
+        AXIS["longitude",east,
+            ORDER[2],
+            ANGLEUNIT["degree",0.0174532925199433]],
+    ID["EPSG",4326]]
+Data axis to CRS axis mapping: 2,1
+osm_id: String (12.0)
+code: Integer (4.0)
+fclass: String (28.0)
+name: String (100.0)
+
+==================================================
