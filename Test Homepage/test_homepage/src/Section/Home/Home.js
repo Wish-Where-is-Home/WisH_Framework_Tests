@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './Home.css';
+import {useTranslation} from "react-i18next";
+import videobackground from './../../Assets/videobackground.mp4';
+
 
 
 function Home( {darkMode}) {
+    
+    const {t} = useTranslation("common");
 
     const [selectedDistrict, setSelectedDistrict] = useState('');
 
@@ -30,18 +35,36 @@ function Home( {darkMode}) {
             selectedPath.style.fill = 'black';
         }
     };
+
+    useEffect(() => {
+        const video = document.querySelector('.video');
+        video.addEventListener('webkitpresentationmodechanged', (e) => {
+            if (video.webkitPresentationMode === 'picture-in-picture') {
+                video.webkitSetPresentationMode('inline');
+            }
+        });
+        return () => {
+            video.removeEventListener('webkitpresentationmodechanged', (e) => {
+                if (video.webkitPresentationMode === 'picture-in-picture') {
+                    video.webkitSetPresentationMode('inline');
+                }
+            });
+        };
+    }, []);
     
         return (
             <div className={`home-section ${darkMode ? 'dark-mode' : 'light-mode'}`}>
+                 <div className="video-container">
+                 <video autoPlay muted loop className="video" disablePictureInPicture controlsList="nodownload">
+                    <source src={videobackground} type="video/mp4" />
+                </video>
+                </div>
                <h2 className='hometitle'>
-                    Where Is Home
+               {t('QuoteHome')}!
                 </h2>
                 <div className='home-container'>
                     <div className='left'>
-                    </div>
-                    <div className='right'>
-                    <p>Select a district:</p>
-                        <div className='select-district'>
+                    <div className='select-district'>
                         <select
                             id="districtSelect"
                             className='select'
@@ -50,7 +73,7 @@ function Home( {darkMode}) {
                             onChange={(event) => handleDistrictClick(event, event.target.value)}
                             value={selectedDistrict}
                         >
-                            <option value="" disabled selected>Select district...</option>
+                            <option value="Portugal"selected>Portugal</option>
                             <option value="Aveiro">Aveiro</option>
                             <option value="Beja">Beja</option>
                             <option value="Braga">Braga</option>
@@ -71,7 +94,10 @@ function Home( {darkMode}) {
                             <option value="Viseu">Viseu</option>
                         </select>
                         </div>
-                    <svg className="svg-icon" width="375" height="700" viewBox="0 0 12969 26674">
+                    </div>
+                    <div className='right'>
+                    <p>{t('selectedistrict')}:</p>
+                    <svg className="svg-icon" width="500" height="700" viewBox="0 0 12969 26674">
                         <path id="Viana_do_Castelo"  onClick={(event) => handleDistrictClick(event, 'Viana_do_Castelo')}  data-z="31" class="district z z31" d="M5329 1730c-66-17-64 0-92 15l-110 113c-121 4-292 156-324 162-42-3-181 2-190-1l-63-42-153 42c-101 28-190 153-246 162-51-1-120-63-171 40-4 70-22 172-11 235-20 5-54 13-72 31l-21 36c-2 67 22 43 26 107l-40 111-33 28-36-11-62-98c-65-6-65 3-114 40-67-40-52-40-108-46l-17-34-39 18 1 73c-47-2-31 4-66-28-40 2-230 40-268 53l-15 35c-82 42-170 47-257 69l-98-359-131-228-34-128 2-264 32-98-32-131 32-97 196-262 229-98 33-163 130-98 196-98 65-196 196-98 196 33 65-131 164-32 261 32 196-65 130 33 33-98 294-196 196-98 32 98-32 131 65 228 98-65h131l98 32 32 98v131l-65 98-98 33-33 98-98 65-32 98-98 65-33 98-33 131 196 196v195z"  fill={selectedDistrict===1 ? 'black' : 'transparent'}stroke="black" />
                         <path id="Braga"onClick={(event) => handleDistrictClick(event, 'Braga')} data-z="32" class="district z z32" d="M5329 1730c-66-17-64 0-92 15l-110 113c-121 4-292 156-324 162-42-3-181 2-190-1l-63-42-153 42c-101 28-190 153-246 162-51-1-120-63-171 40-4 70-22 172-11 235-20 5-54 13-72 31l-21 36c-2 67 22 43 26 107l-40 111-33 28-36-11-62-98c-65-6-65 3-114 40-67-40-52-40-108-46l-17-34-39 18 1 73c-47-2-31 4-66-28-40 2-230 40-268 53l-15 35c-82 42-170 47-257 69l65 294v261l66 131v131c58-22 39-9 81-55l27 42c109 12 53-8 132 66l116-33 37 19c30 44 51 107 91 124 77 31 65 60 140 30 45 26 29 11 64 87l-136 68 54 184c22 1 354-18 355-19 43-53 52-56 91-127l199-29 49 55c169 16 391-82 456-69-5 45-7 28 10 72 85-32 174-64 260-95 18-12 31-70 32-70 71-42 91-27 138-55l9-72c200 51 198-5 310 190-62 100 186 171 254 209 28-43 13-30 58-54 34 44 76 73 118 125 13-1 198-149 211-169l33-101c7-14 156-340 157-344 9-53-16-96 14-224l57-58c77 5 27 32 103-17 20-33-6-61 15-92l68 6c18-31 175-267 176-267 47-34 93-52 67-124l-67-130-77-25c-39 47-31 42-60 106-28 5-189 31-190 31-53-16-324-80-356-101-10-157 16-226 65-356-19-23-196-122-214-117-103 32-202 79-336 73 47-93 81-60 123-143 21-42 16-47 19-78 7-67 32-123 89-158-19-156 4-155 96-264l-98-33-163 131-327-66z"  fill={selectedDistrict ? 'black' : 'transparent'}stroke="black"/>
                         <path id="Porto" onClick={(event) => handleDistrictClick(event, 'Porto')} data-z="33" class="district z z33" d="M2979 3657c58-22 39-9 81-55l27 42c109 12 53-8 132 66l116-33 37 19c30 44 51 107 91 124 77 31 65 60 140 30 45 26 29 11 64 87l-136 68 54 184c22 1 354-18 355-19 43-53 52-56 91-127l199-29 49 55c169 16 391-82 456-69-5 45-7 28 10 72 85-32 174-64 260-95 18-12 31-70 32-70 71-42 91-27 138-55l9-72c200 51 198-5 310 190-62 100 186 171 254 209 28-43 13-30 58-54 34 44 76 73 118 125 13-1 198-149 211-169l33-101c16 22 26 37 54 52 45 24 25-8 53 50l-63 72 17 36c22 24 296 61 184 170 8 70 98 202 161 240l-67 180c60 164-59 157-5 260-80 148-101 93-78 206-81-1-47 33-132-15l-63 52c-4 1-330 118-382 134-200 36 0-77-312 49-60 24-159-10-215-29-99-33-95 35-136 75-61-6-43-9-81 9l-80 56c-66-44-124-64-152-46-34 46-183 240-248 197-88-57-84-35-184-62 29 91-23 107 68 163-6 89 13 55-17 111-120-48-33-85-155-107l19-71c-109-48-10-16-110-91-61 62-65 8-143 50 110 52 39 12 47 139-49 42-41 32-112 63l-90-133-33-19c-73 42-75 33-102 107l-76 28c-96-16-95-48-202-36l-32-26-33-130-32-98v-196l-66-196-153-308c-15-180-51-371-108-541v-131l-32-98-66-98-65-195 33-196z"  fill={selectedDistrict ? 'black' : 'transparent'}stroke="black"/>

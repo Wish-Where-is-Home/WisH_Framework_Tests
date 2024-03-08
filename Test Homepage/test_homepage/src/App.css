@@ -10,6 +10,10 @@
   --text-color1-dark:#0dddda;
 
 
+  --text-shadow-light:0 0 5px rgba(0, 0, 0, 0.5);
+  --text-shadow-dark:0 0 5px rgba(255, 255, 255, 0.649);
+
+
 }
 
 
@@ -18,6 +22,7 @@
   --background-color: var(--background-color-light);
   --hamburger-lines: var(--hamburger-lines-light);
   --text-color1: var(--text-color1-light);
+  --text-shadow: var(--text-shadow-light);
 }
 
 
@@ -25,6 +30,7 @@
   --background-color: var(--background-color-dark);
   --hamburger-lines: var(--hamburger-lines-dark);
   --text-color1: var(--text-color1-dark);
+  --text-shadow: var(--text-shadow-dark);
 }
 
 
