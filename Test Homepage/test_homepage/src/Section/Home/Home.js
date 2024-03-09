@@ -2,10 +2,30 @@ import React, { useState, useEffect } from 'react';
 import './Home.css';
 import {useTranslation} from "react-i18next";
 import videobackground from './../../Assets/videobackground.mp4';
-
+import { FaInfoCircle } from 'react-icons/fa';
 
 
 function Home( {darkMode}) {
+
+    const [modalVisible, setModalVisible] = useState(false);
+    const [modalContent, setModalContent] = useState('');
+
+    const handleInfoMouseEnter = () => {
+       
+        const content = (
+            <div>
+                <p>{t('infotext')}.</p>
+            </div>
+        );
+        
+        
+        setModalContent(content);
+        setModalVisible(true);
+    };
+
+    const handleInfoMouseLeave = () => {
+        setModalVisible(false);
+    };
     
     const {t} = useTranslation("common");
 
@@ -93,6 +113,18 @@ function Home( {darkMode}) {
                             <option value="Vila_Real">Vila Real</option>
                             <option value="Viseu">Viseu</option>
                         </select>
+                        <div style={{ position: 'relative',width:'100%' }}>
+                        <FaInfoCircle 
+                            onMouseEnter={handleInfoMouseEnter} 
+                            onMouseLeave={handleInfoMouseLeave} 
+                            style={{ cursor: 'pointer',color:"white",alignSelf:'center',marginTop:'1rem'}} 
+                        />
+                         <div className={modalVisible ? "modal visible" : "modal"}>
+                            <div className="modal-content">
+                                {modalContent}
+                            </div>
+                         </div>
+                        </div>
                         </div>
                         <div>
                             <button className='button-homepage'>
