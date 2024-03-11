@@ -16,3 +16,10 @@
 .active-language {
     text-shadow: var(--text-shadow);
 }
+
+@media (max-width: 1000px) {
+    .LanguageSelector{
+        white-space: nowrap;
+    }
+    
+}

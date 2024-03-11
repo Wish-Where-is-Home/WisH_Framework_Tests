@@ -84,46 +84,46 @@ function Home( {darkMode}) {
                 </h2>
                 <div className='home-container'>
                     <div className='left'>
-                    <div className='select-district'>
-                        <select
-                            id="districtSelect"
-                            className='select'
-                            p
-                            size={1}
-                            onChange={(event) => handleDistrictClick(event, event.target.value)}
-                            value={selectedDistrict}
-                        >
-                            <option value="Portugal"selected>Portugal</option>
-                            <option value="Aveiro">Aveiro</option>
-                            <option value="Beja">Beja</option>
-                            <option value="Braga">Braga</option>
-                            <option value="Braganca">Bragança</option>
-                            <option value="Castelo_Branco">Castelo Branco</option>
-                            <option value="Coimbra">Coimbra</option>
-                            <option value="Évora">Évora</option>
-                            <option value="Faro">Faro</option>
-                            <option value="Guarda">Guarda</option>
-                            <option value="Leiria">Leiria</option>
-                            <option value="Lisboa">Lisboa</option>
-                            <option value="Portalegre">Portalegre</option>
-                            <option value="Porto">Porto</option>
-                            <option value="Santarem">Santarém</option>
-                            <option value="Setúbal">Setúbal</option>
-                            <option value="Viana_do_Castelo">Viana do Castelo</option>
-                            <option value="Vila_Real">Vila Real</option>
-                            <option value="Viseu">Viseu</option>
-                        </select>
-                        <div style={{ position: 'relative',width:'100%' }}>
-                        <FaInfoCircle 
-                            onMouseEnter={handleInfoMouseEnter} 
-                            onMouseLeave={handleInfoMouseLeave} 
-                            style={{ cursor: 'pointer',color:"white",alignSelf:'center',marginTop:'1rem'}} 
-                        />
-                         <div className={modalVisible ? "modal visible" : "modal"}>
-                            <div className="modal-content">
-                                {modalContent}
+                        <div className='select-district'>
+                            <select
+                                id="districtSelect"
+                                className='select'
+                                p
+                                size={1}
+                                onChange={(event) => handleDistrictClick(event, event.target.value)}
+                                value={selectedDistrict}
+                            >
+                                <option value="Portugal"selected>Portugal</option>
+                                <option value="Aveiro">Aveiro</option>
+                                <option value="Beja">Beja</option>
+                                <option value="Braga">Braga</option>
+                                <option value="Braganca">Bragança</option>
+                                <option value="Castelo_Branco">Castelo Branco</option>
+                                <option value="Coimbra">Coimbra</option>
+                                <option value="Évora">Évora</option>
+                                <option value="Faro">Faro</option>
+                                <option value="Guarda">Guarda</option>
+                                <option value="Leiria">Leiria</option>
+                                <option value="Lisboa">Lisboa</option>
+                                <option value="Portalegre">Portalegre</option>
+                                <option value="Porto">Porto</option>
+                                <option value="Santarem">Santarém</option>
+                                <option value="Setúbal">Setúbal</option>
+                                <option value="Viana_do_Castelo">Viana do Castelo</option>
+                                <option value="Vila_Real">Vila Real</option>
+                                <option value="Viseu">Viseu</option>
+                            </select>
+                            <div style={{ position: 'relative',width:'100%' }}>
+                            <FaInfoCircle 
+                                onMouseEnter={handleInfoMouseEnter} 
+                                onMouseLeave={handleInfoMouseLeave} 
+                                style={{ cursor: 'pointer',color:"white",alignSelf:'center',marginTop:'1rem'}} 
+                            />
+                            <div className={modalVisible ? "modal visible" : "modal"}>
+                                <div className="modal-content">
+                                    {modalContent}
+                                </div>
                             </div>
-                         </div>
                         </div>
                         </div>
                         <div>

@@ -188,6 +188,8 @@
     text-decoration: none;
     color: black;
     font-size: 18px;
+    
+
 }
 
 .menu-items ul li a:hover {
@@ -231,4 +233,12 @@
 .theme-toggle:checked::before {
     background: #333;
     left: 32px;
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        width: 100%;
+    }
+
 }
