@@ -10,7 +10,7 @@ function Navbar({ darkMode, toggleDarkMode }) {
 
 
     const [menuOpen, setMenuOpen] = useState(false);
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 3000);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 1700);
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);

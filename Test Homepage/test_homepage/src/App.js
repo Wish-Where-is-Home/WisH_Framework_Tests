@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes, BrowserRouter } from 'react-router-dom'; 
+
 import './App.css';
 import Navbar from './Section/Navbar/Navbar';
 import Home from './Section/Home/Home';
 import Loader from './Section/Loader/Loader';
+import Ndpage from './Page/2ndpage/Ndpage';
 
 function App() {
     const [darkMode, setDarkMode] = useState(false);
@@ -32,7 +35,12 @@ function App() {
             {!loading && (
                 <>
                     <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
-                    <Home darkMode={darkMode}/>
+                    <BrowserRouter>
+                        <Routes>
+                        <Route exact path="/" element={<Home darkMode={darkMode} />} />
+                        <Route path="/ndpage" element={<Ndpage darkMode={darkMode} />} />
+                        </Routes>
+                    </BrowserRouter>
                 </>
             )}
         </div>
